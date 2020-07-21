@@ -95,8 +95,9 @@ namespace Emby.Plugins.PhoenixAdult
                 result.Item.Name = scene.Title;
                 result.Item.Overview = scene.Description;
 
-                foreach (var studio in scene.Studios)
-                    result.Item.AddStudio(studio);
+                if (scene.Studios != null)
+                    foreach (var studio in scene.Studios)
+                        result.Item.AddStudio(studio);
 
                 if (scene.ReleaseDate.HasValue)
                 {
