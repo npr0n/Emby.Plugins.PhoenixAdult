@@ -38,12 +38,9 @@ namespace Emby.Plugins.PhoenixAdult
             if (searchInfo == null)
                 return result;
 
-            Log.Info(searchInfo.Name);
-
             var searchResults = await PhoenixAdultNETProvider.Search(searchInfo.Name, cancellationToken).ConfigureAwait(false);
             foreach (var searchResult in searchResults)
             {
-                Log.Info(searchResult.Title);
                 result.Add(new RemoteSearchResult
                 {
                     ProviderIds = { { PluginName, searchResult.CurID } },
