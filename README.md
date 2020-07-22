@@ -6,7 +6,7 @@ This metadata provider helps fill Emby with information for your adult videos by
 
 ------------
 
-## Required Libraries
+## Used Libraries
 - [PhoenixAdult.NET](https://github.com/DirtyRacer1337/PhoenixAdult.NET)
 
 ## Build Process
